@@ -39,7 +39,8 @@ const requestListener = function (req, res) {
 	
 	//handle requests for others in local filesystem
 	} else {
-		let read = fs.createReadStream("/" + req.url)
+		console.log(req.url)
+		let read = fs.createReadStream("index.html")
 		read.pipe(res)
 	}
 }
