@@ -170,7 +170,7 @@ function log_select(dropdown) {
 		
 		//build appropriate query for node API with car session parameter as the one selected
 		//send GET 
-		query = 'http://192.168.1.1:8080/api/data?car_session=' + dropdown.value
+		query = '/app/api/data?car_session=' + dropdown.value
 		get(query)
 	} else {
 		
@@ -401,7 +401,7 @@ function populate(message) {
 }
 
 //send GET request to node server for all sessions, pipe response to populate handler function
-let data = fetch('http://192.168.1.1:8080/api/sessions')
+let data = fetch('/app/api/sessions')
 	.then(response => response.json()).then(populate)
 
 //reset zoom function changes meta attribute to allow scaling, resets zoom, re-disables scaling meta attribute
