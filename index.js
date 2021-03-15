@@ -9,7 +9,7 @@ const requestListener = function (req, res) {
 
 	//handle browser requests for favicon
 	if(req.url === '/favicon.ico') {
-		res.writeHead(404)
+		//res.writeHead(404)
 		res.end()
 	
 	//handle request for all car sessions
@@ -43,7 +43,7 @@ const requestListener = function (req, res) {
 	
 	//handle requests for others in local filesystem
 	} else {
-		let read = fs.createReadStream("/home/pi" + req.url)
+		let read = fs.createReadStream(req.url)
 		read.pipe(res)
 	}
 }
