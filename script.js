@@ -116,6 +116,10 @@ var message_break = message_buffer
 
 //if window height > window width, adapt several components
 if(window.innerHeight > window.innerWidth) {	
+
+	//formatting
+	message_break = "<br>"
+
 	//set aspect ratio to that of the display and update
 	chart.aspectRatio = (window.innerWidth / window.innerHeight)
 	chart.resize()
