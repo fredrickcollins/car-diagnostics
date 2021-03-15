@@ -41,7 +41,7 @@ const requestListener = function (req, res) {
 	} else {
 		console.log(req.url)
 		console.log(__dirname)
-		let read = fs.createReadStream("index.html")
+		let read = fs.createReadStream("/app"+req.url)
 		read.pipe(res)
 	}
 }
