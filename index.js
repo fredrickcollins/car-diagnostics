@@ -39,9 +39,12 @@ const requestListener = function (req, res) {
 	
 	//handle requests for others in local filesystem
 	} else {
-		console.log(__dirname + req.url)
-		let read = fs.createReadStream("/app"+req.url)
+		if (fs.lstatSync(filePath).isDirectory()) {
+			return;
+		} else {
+		let read = fs.createReadStream(req.url)
 		read.pipe(res)
+		}
 	}
 }
 
