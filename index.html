@@ -1,0 +1,97 @@
+
+<html>
+	<head>
+		<title> ice reader - data explorer </title>
+		
+		<!-- set properties for simple navigation bar at the top of the page !-->
+		<style>
+			.nav {
+				background-color: #3c3c3c;
+				overflow: hidden;
+			}
+
+			.nav a {
+				font-size:20px;
+				color: #ffffff;
+				margin: 0.5% 1% 0.5% 1%;
+			}
+
+			.nav select {
+				float: left;
+				margin: 0.6% 0% 0.6% 0%;
+			}
+
+			body {
+				margin: 0px;
+				font-family: Times New Roman;
+			}
+		</style>
+		<!-- set global font and make navbar hug the edges of the window !-->
+		
+		<!-- prevents mobile from auto-zooming on <select> objects !-->
+		<meta name="viewport" content="user-scalable=no">
+
+		<!-- reference locally stored chart.js library !-->
+		<script src="chartjs.js"></script>
+		<script src="hammerjs.js"></script>
+		<script src="chartjs-plugin-zoom.js"></script>
+	</head>
+
+	<body>
+	
+		<!-- build the navbar styled above, center the title, and set IDs + onChange functions for later referencing !-->
+		<div class="nav" id="nav">
+			<a style="float: left"> load </a>
+			<select class="logSelect" id="logSelect" onchange="log_select(this)">
+				<option value=0></option>
+			</select> 
+			<a style="float: left; padding-left: 30%" id="titleText"> ice reader - data explorer </a>
+			<a style="float: right" href=""> github </a>
+		</div>
+	
+		<!-- build the content-holding div and center it !-->
+		<div style="width:65%; margin-left: auto; margin-right: auto; margin-top: 5%;">
+		
+			<!-- mark labels for dropdown menus !-->
+			<label for="chartSelect" id="chartText" style="margin-left: 5.4%; font-weight: bold;"> chart </label> 
+			<label for="studySelect" id="studyText" style="margin-left: 11.3%; font-weight: bold;"> study </label>
+			<label for="compareSelect" id="compareText" style="margin-left: 11.9%; font-weight: bold;"> compare </label>
+			<br>
+			
+			<!-- create dropdown menus, set IDs + onChange functions for later referencing !-->
+			<select style="margin-left: 5.3%;" name=0 id="chartSelect" onchange="display(this)">
+				<option></option>
+			</select> 
+			
+			<!-- only the studies dropdown is statically populated !-->
+			<select style="margin-left: 2.4%;" name="studySelect" id="studySelect" onchange="new_study(this)">
+				<option value=0></option>
+				<option value=10 >moving average (10)</option>
+				<option value=50 >moving average (50)</option>
+				<option value=100 >moving average (100)</option>
+				<option value=200 >moving average (200)</option>
+			</select>
+			
+			<select style="margin-left: 2.4%;" name=1 id="compareSelect" onchange="display(this)">
+				<option></option>
+			</select>
+			
+			<!-- this is hidden for non-mobile users !-->
+			<button onclick="resetZoom()" id="zoomButton">reset zoom</button>
+			
+			<!-- the information section is above the canvas for non-mobile users !-->
+			<label id="message" style="margin-left: 1%"></label>
+			
+			<br><br>
+			
+			<!-- create the canvas - note doubleclick doesn't work on mobile, hence the above button !-->
+			<canvas id="canvas" ondblclick="resetZoom()"></canvas><br>
+			
+		</div>
+		
+		<!-- the message ID will be swapped to this label beneath the canvas for mobile users !-->
+		<label id="mobileMessage"></label>
+		
+		<script src="script.js"></script>
+	</body>
+</html>
