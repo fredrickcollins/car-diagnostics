@@ -6,14 +6,9 @@ const url = require('url')
 const db = require('better-sqlite3')('ice.db')
 
 const requestListener = function (req, res) {
-
-	//handle browser requests for favicon
-	if(req.url === '/favicon.ico') {
-		//res.writeHead(404)
-		res.end()
 	
 	//handle request for all car sessions
-	} else if (req.url.indexOf('/api/sessions') === 0) {
+    if (req.url.indexOf('/api/sessions') === 0) {
 		res.writeHead(200)
 	
 	//select all unique sessions via SQLite3, return as json
