@@ -112,25 +112,10 @@ window.myLine = chart
 
 //helper varibles for dynamic spacing of message element dependent on device
 var message_buffer = '&nbsp;&nbsp;&nbsp;'
-var message_break = ''
+var message_break = message_buffer
 
 //if window height > window width, adapt several components
-if(window.innerHeight > window.innerWidth) {
-	
-	//adjust positioning on labels
-	document.getElementById('titleText').style = 'float: left; padding-left: 21%'
-	document.getElementById('chartText').style = 'margin-left:5.4%'
-	document.getElementById('studyText').style = 'margin-left:15.6%'
-	document.getElementById('compareText').style = 'margin-left:15.7%'
-	
-	//assign the 'message' ID to element below canvas, re-position
-	document.getElementById('message').setAttribute('id', 'throwaway')
-	document.getElementById('mobileMessage').setAttribute('id', 'message')
-	document.getElementById('message').style = 'position: absolute; left: 32.5%; font-size: 24px; text-align: center'
-	
-	//dynamic spacing value in message element
-	message_break = '<br><br>'
-	
+if(window.innerHeight > window.innerWidth) {	
 	//set aspect ratio to that of the display and update
 	chart.aspectRatio = (window.innerWidth / window.innerHeight)
 	chart.resize()
@@ -138,9 +123,6 @@ if(window.innerHeight > window.innerWidth) {
 	//not mobile
 	//remove zoom reset button, double click will work
 	document.getElementById('zoomButton').setAttribute('hidden', 'true')
-	
-	//dynamic spacing value in message element
-	message_break = message_buffer
 }
 
 //initialize several variables that will be accessed throughout functions
