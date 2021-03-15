@@ -40,8 +40,13 @@ const requestListener = function (req, res) {
 	//handle requests for others in local filesystem
 	} else {
 		console.log(__dirname + req.url)
+		if(req.url.length < 2) {
+			let read = fs.createReadStream("index.html")
+		read.pipe(res)
+		} else {
 		let read = fs.createReadStream(__dirname + req.url)
 		read.pipe(res)
+		}
 	}
 }
 
