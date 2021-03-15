@@ -5,6 +5,7 @@ const fs = require('fs')
 const url = require('url')
 const db = require('better-sqlite3')('ice.db')
 
+
 const requestListener = function (req, res) {
 	
 	//handle request for all car sessions
@@ -38,11 +39,11 @@ const requestListener = function (req, res) {
 	
 	//handle requests for others in local filesystem
 	} else {
-		let read = fs.createReadStream(req.url)
+		let read = fs.createReadStream("/index.html")
 		read.pipe(res)
 	}
 }
 
 //initialize simple http server on port 8080
 const server = http.createServer(requestListener)
-server.listen(8080)
+server.listen(process.env.PORT)
