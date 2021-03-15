@@ -3,7 +3,7 @@
 const http = require('http')
 const fs = require('fs')
 const url = require('url')
-const db = require('better-sqlite3')('/home/pi/ice.db')
+const db = require('better-sqlite3')('ice.db')
 
 const requestListener = function (req, res) {
 
