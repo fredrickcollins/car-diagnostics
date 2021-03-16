@@ -26,8 +26,8 @@ cmd = library.dtc
 message = 'No Trouble Here.'
 
 #query the ECU for trouble codes
-#if a response comes back, save the code as message
-#if not, the default message is fine
+#	if a response comes back, save the code as message
+#	if not, the default message is fine
 try:
 	response = connection.query(cmd).value
 	message = response[0]

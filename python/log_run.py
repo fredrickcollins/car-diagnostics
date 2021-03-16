@@ -68,34 +68,3 @@ connection.close()
 disp.fill(0)
 disp.image(image)
 disp.show()
-
-
-
-
-
-
-
-#link.execute('DROP TABLE car_data;')
-
-#link.execute('CREATE TABLE car_session (startMs text PRIMARY KEY);')
-
-#link.execute('INSERT INTO car_session VALUES (?);', [session])
-
-#link.execute('CREATE TABLE car_data (car_session text, timeMs text, query_code int, query_value real, FOREIGN KEY(car_session) REFERENCES car_session(startMs));')
-
-#link.execute('INSERT INTO car_data VALUES (123456789, 987654322, 64, 100.8);')
-
-#response = connection.query(intake_pressure).value.magnitude
-
-#response = [session, datetime.now().strftime('%H:%M:%S.%f'), float(car_connection.query(intake_pressure).value.magnitude)]
-#link.execute('INSERT INTO car_data VALUES (?, ?, 3, ?);', response)
-
-#response = [session, datetime.now().strftime('%H:%M:%S.%f'), float(car_connection.query(rpm).value.magnitude)]
-#link.execute('INSERT INTO car_data VALUES (?, ?, 4, ?);', response)
-
-#link.execute('SELECT * FROM car_data WHERE car_session = ?;', [session])
-
-#os.system("sudo node /home/pi/index.js")
-
-#for c in link.fetchall():
-	#print(c)
