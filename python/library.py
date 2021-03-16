@@ -16,7 +16,6 @@ volumetric_efficiency = obd.commands.ABSOLUTE_LOAD
 timing = obd.commands.TIMING_ADVANCE
 throttle = obd.commands.RELATIVE_THROTTLE_POS
 coolant = obd.commands.COOLANT_TEMP
-oil_temp = obd.commands.OIL_TEMP
 intake_temp = obd.commands.INTAKE_TEMP
 afr = obd.commands.COMMANDED_EQUIV_RATIO
 ambient = obd.commands.AMBIANT_AIR_TEMP
