@@ -384,19 +384,6 @@ function populate(message) {
 		
 		document.getElementById('compareSelect').appendChild(option_clone)
 	}	
-	
-	clearChart()
-	document.getElementById('logSelect').selectedIndex = 2
-	log_select(document.getElementById('logSelect'))
-	document.getElementById('chartSelect').selectedIndex = 5
-	document.getElementById('studySelect').selectedIndex = 2
-	document.getElementById('compareSelect').selectedIndex = 2
-	
-	display(document.getElementById('chartSelect'))
-	display(document.getElementById('compareSelect'))
-	new_study(document.getElementById('studySelect'))
-	
-	
 }
 
 //send GET request to node server for all sessions, pipe response to populate handler function
