@@ -39,18 +39,12 @@ const requestListener = function (req, res) {
 	
 	//handle requests for others in local filesystem
 	} else {
-		console.log('HARPHARPHAP')
 		console.log(__dirname + req.url)
 		if(req.url.length < 2) {
 			let read = fs.createReadStream("index.html")
 			read.pipe(res)
 		} else {
-			try{
-			var read = fs.createReadStream(__dirname + req.url)
-			} catch (e) {
-				res.writeHead(404)
-				res.end()
-			}
+			let read = fs.createReadStream(__dirname + req.url)
 			read.pipe(res)
 		}
 	}
