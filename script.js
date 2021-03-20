@@ -387,10 +387,11 @@ function populate(message) {
 	
 	clearChart()
 	document.getElementById('logSelect').selectedIndex = 2
+	log_select(document.getElementById('logSelect'))
 	document.getElementById('chartSelect').selectedIndex = 5
 	document.getElementById('studySelect').selectedIndex = 2
 	document.getElementById('compareSelect').selectedIndex = 2
-	log_select(document.getElementById('logSelect'))
+	
 	display(document.getElementById('chartSelect'))
 	display(document.getElementById('compareSelect'))
 	new_study(document.getElementById('studySelect'))
