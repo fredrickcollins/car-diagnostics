@@ -44,8 +44,13 @@ const requestListener = function (req, res) {
 			let read = fs.createReadStream("index.html")
 			read.pipe(res)
 		} else {
+			try{
 			let read = fs.createReadStream(__dirname + req.url)
 			read.pipe(res)
+			} catch (e) {
+				res.writeHead(404)
+				res.end()
+			}
 		}
 	}
 }
