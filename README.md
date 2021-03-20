@@ -24,7 +24,7 @@ Raspberry Pi Zero W [OBD-II](https://en.wikipedia.org/wiki/On-board_diagnostics)
 
 2) Attach display board to headers
 
-3) Mount in car [dual-lock velcro recommended](https://www.homedepot.com/p/3M-Scotch-1-in-x-1-in-Black-Extreme-Fasteners-6-Sets-Pack-RFD7021/206180486)
+3) Mount in car [recommended](https://www.homedepot.com/p/3M-Scotch-1-in-x-1-in-Black-Extreme-Fasteners-6-Sets-Pack-RFD7021/206180486)
 
 4) Supply power to 'PWR IN' port
 
@@ -34,7 +34,6 @@ Raspberry Pi Zero W [OBD-II](https://en.wikipedia.org/wiki/On-board_diagnostics)
 
 7) Connect to WiFi network 'pi' with password 'raspberry' on any device
 
-8) Visit 192.168.1.1:8080 in browser for webapp
+8) Visit '192.168.1.1:8080' in browser for webapp
 
-## License
-MIT
+## License - MIT
