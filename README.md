@@ -20,11 +20,21 @@ Raspberry Pi Zero W [OBD-II](https://en.wikipedia.org/wiki/On-board_diagnostics)
 [Flash the image to SD card](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 ## Usage
-Fit the Pi into it's case
+Fit Pi into case
 
-Attach display board to Pi headers
+Attach display board to headers
 
 Mount in car [dual-lock velcro recommended](https://www.homedepot.com/p/3M-Scotch-1-in-x-1-in-Black-Extreme-Fasteners-6-Sets-Pack-RFD7021/206180486)
+
+Supply power to 'PWR IN' port
+
+Connect OBD-II cable + micro adapter to 'USB' port
+
+Use joystick and buttons to navigate
+
+Connect to WiFi network 'pi' with password 'raspberry' on any device
+
+Visit 192.168.1.1:8080 in browser for webapp
 
 ## License
 MIT
