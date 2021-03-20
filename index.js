@@ -46,12 +46,12 @@ const requestListener = function (req, res) {
 			read.pipe(res)
 		} else {
 			try{
-			let read = fs.createReadStream(__dirname + req.url)
-			read.pipe(res)
+			var read = fs.createReadStream(__dirname + req.url)
 			} catch (e) {
 				res.writeHead(404)
 				res.end()
 			}
+			read.pipe(res)
 		}
 	}
 }
