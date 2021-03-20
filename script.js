@@ -385,6 +385,7 @@ function populate(message) {
 		document.getElementById('compareSelect').appendChild(option_clone)
 	}	
 	
+	clearChart()
 	document.getElementById('logSelect').selectedIndex = 2
 	document.getElementById('chartSelect').selectedIndex = 5
 	document.getElementById('studySelect').selectedIndex = 2
