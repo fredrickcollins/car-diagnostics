@@ -36,4 +36,6 @@ Raspberry Pi Zero W [OBD-II](https://en.wikipedia.org/wiki/On-board_diagnostics)
 
 8) Visit '192.168.1.1:8080' in browser for webapp
 
+![](screencap.png)
+
 ### License - MIT
