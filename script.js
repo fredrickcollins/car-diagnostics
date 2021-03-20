@@ -386,9 +386,15 @@ function populate(message) {
 	}	
 	
 	document.getElementById('logSelect').selectedIndex = 2
-	document.getElementById('chartSelect').selectedIndex = 4
+	document.getElementById('chartSelect').selectedIndex = 5
 	document.getElementById('studySelect').selectedIndex = 2
-	document.getElementById('compareSelect').selectedIndex = 6
+	document.getElementById('compareSelect').selectedIndex = 2
+	log_select(document.getElementById('logSelect'))
+	display(document.getElementById('chartSelect'))
+	display(document.getElementById('compareSelect'))
+	new_study(document.getElementById('studySelect'))
+	
+	
 }
 
 //send GET request to node server for all sessions, pipe response to populate handler function
