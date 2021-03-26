@@ -15,7 +15,7 @@ Raspberry Pi Zero W [OBD-II](https://en.wikipedia.org/wiki/On-board_diagnostics)
 [Micro SD Card (4GB+)](https://www.amazon.com/Micro-Center-Class-Memory-Adapter/dp/B07YLYX4NL/)
 
 ## Installation
-[Shoot me an email for the prebuilt image](mailto@fredrickcollins18@gmail.com)
+[Shoot me an email for the prebuilt image](mailto:fredrickcollins18@gmail.com)
 
 [Flash the image to SD card](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
